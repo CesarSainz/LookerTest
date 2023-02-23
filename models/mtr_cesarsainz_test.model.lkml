@@ -12,10 +12,10 @@ datagroup: mtr_cesarsainz_test_default_datagroup {
   max_cache_age: "1 hour"
 }
 
-datagroup: custom_datagroup {
-  max_cache_age: "24 hours"
-  sql_trigger:  ;;
-}
+#datagroup: custom_datagroup {
+ # max_cache_age: "24 hours"
+  #sql_trigger:  ;;
+#}
 
 
 persist_with: mtr_cesarsainz_test_default_datagroup
