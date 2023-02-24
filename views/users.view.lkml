@@ -73,4 +73,10 @@ view: users {
     type: count
     drill_fields: [id, name, orders.count]
   }
+
+  measure: test_content  {
+    type: sum
+    sql: ${age}
+    ;;
+  }
 }
