@@ -1,7 +1,7 @@
 view: unexpected_validator {
 # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: "LOOKER_TEST"."UNEXPECTED_STUFF"
+  sql_table_name: looker_test.users
     ;;
   drill_fields: [id]
   # This primary key is the unique key for this table in the underlying database.
