@@ -14,6 +14,13 @@ view: userss {
     sql: ${TABLE}.id ;;
   }
 
+  dimension: req_device_os {
+    group_label: "Request"
+    type: string
+    sql: ${TABLE}.userss;;
+    #suggest_explore: global_filter
+    #suggest_dimension: global_filter.os
+  }
   # Here's what a typical dimension looks like in LookML.
   # A dimension is a groupable field that can be used to filter query results.
   # This dimension will be called "Age" in Explore.
@@ -78,5 +85,16 @@ view: userss {
     type: sum
     sql: ${age}
     ;;
+  }
+
+  measure: age_count {
+    type: count_distinct
+    sql: ${age} ;;
+  }
+
+  measure: age_50 {
+    type: number
+    value_format: "#$0.00"
+    sql: ${age_count}*2   ;;
   }
 }
