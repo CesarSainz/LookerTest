@@ -18,8 +18,8 @@ view: userss {
     group_label: "Request"
     type: string
     sql: ${TABLE}.userss;;
-    #suggest_explore: global_filter
-    #suggest_dimension: global_filter.os
+    suggest_explore: order_items
+    suggest_dimension: order_items.id
   }
   # Here's what a typical dimension looks like in LookML.
   # A dimension is a groupable field that can be used to filter query results.
