@@ -11,7 +11,6 @@ datagroup: mtr_cesarsainz_test_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
-
 #datagroup: custom_datagroup {
  # max_cache_age: "24 hours"
   #sql_trigger:  ;;
@@ -51,10 +50,14 @@ explore: order_items {
 }
 
 explore: orders {
+  always_filter: {
+    filters: [userss.created_quarter: ""]
+  }
   join: userss {
     type: left_outer
     sql_on: ${orders.user_id} = ${userss.id} ;;
     relationship: many_to_one
+
   }
 }
 
