@@ -7,7 +7,7 @@ view: orders_view {
   drill_fields: [id]
   # This primary key is the unique key for this table in the underlying database.
   # You need to define a primary key in a view in order to join to other views.
-
+#simon
   dimension: id {
     primary_key: yes
     type: number
