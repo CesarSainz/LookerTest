@@ -16,6 +16,7 @@ datagroup: mtr_cesarsainz_test_default_datagroup {
   #sql_trigger:  ;;
 #}
 
+week_start_day: saturday
 
 persist_with: mtr_cesarsainz_test_default_datagroup
 
