@@ -43,6 +43,23 @@ view: userss {
     sql: ${age} ;;
   }
 
+  parameter: select_dimension {
+    allowed_value: {
+      label: "State"
+      value: "state"
+    }
+    allowed_value: {
+      label: "Gender"
+      value: "gender"
+    }
+  }
+
+  dimension: state {
+    type: string
+    sql: CASE WHEN {% parameter select_dimension %} = "state"
+    ELSE ${TABLE}.gender END;;
+  }
+
   measure: average_age {
     type: average
     sql: ${age} ;;
