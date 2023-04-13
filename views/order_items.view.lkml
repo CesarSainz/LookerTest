@@ -32,7 +32,7 @@ view: order_items {
 
   dimension: lkfjdslfsd {
     type: string
-    sql: SELECT CONCAT(${amount}, ${id}, ' fun!');;
+    sql: concat(${TABLE}.amount,${TABLE}.id);;
   }
 
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
