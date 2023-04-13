@@ -15,6 +15,11 @@ view: category {
     sql: ${TABLE}.catdesc ;;
   }
 
+  dimension: lkfjdslfsd {
+    type: string
+    sql: CONCAT ${catdesc} AND ${catgroup} ;;
+  }
+
   dimension: catgroup {
     type: string
     sql: ${TABLE}.catgroup ;;
