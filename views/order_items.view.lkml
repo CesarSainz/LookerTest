@@ -31,7 +31,7 @@ view: order_items {
   }
 
   dimension: lkfjdslfsd {
-    type: string
+    type: number
     sql: concat(${TABLE}.amount,${TABLE}.id);;
   }
 
