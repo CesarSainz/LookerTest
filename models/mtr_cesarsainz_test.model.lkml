@@ -37,17 +37,9 @@ explore: connection_reg_r3 {}
 
 
 
-explore: orders {
-  always_filter: {
-    filters: [userss.created_quarter: ""]
-  }
-  join: userss {
-    type: left_outer
-    sql_on: ${orders.user_id} = ${userss.id} ;;
-    relationship: many_to_one
 
-  }
-}
+
+
 
 
 
