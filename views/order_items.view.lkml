@@ -31,8 +31,8 @@ view: order_items {
   }
 
   dimension: lkfjdslfsd {
-    type: number
-    sql: concat(${TABLE}.amount,${TABLE}.id);;
+    type: string
+    sql: concat(CAST(${TABLE}.amount AS varchar),CAST(${TABLE}.id AS varchar));;
   }
 
   # A measure is a field that uses a SQL aggregate function. Here are defined sum and average

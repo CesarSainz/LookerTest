@@ -35,20 +35,7 @@ explore: all_types {}
 
 explore: connection_reg_r3 {}
 
-explore: order_items {
 
-  join: orders {
-    type: left_outer
-    sql_on: ${order_items.order_id} = ${orders.id} ;;
-    relationship: many_to_one
-  }
-
-  join: userss {
-    type: left_outer
-     sql_on: ${orders.user_id} = ${userss.id} ;;
-    relationship: many_to_one
-  }
-}
 
 explore: orders {
   always_filter: {
